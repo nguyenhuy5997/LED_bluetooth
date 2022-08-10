@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rxText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="8"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/custom_background"
+            android:hint="Nội dung data nhận"
+            app:drawableLeftCompat="@drawable/rx" />
+
+        <ImageButton
+            android:id="@+id/bluetoothButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_background"
+            android:scaleType="center"
+            app:srcCompat="@drawable/bluetooth" />
+
+    </LinearLayout>
+
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/colorPickerView"
+        android:layout_width="404dp"
+        android:layout_height="344dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/rgbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_background"
+        android:drawableLeft="@drawable/custom_rgb"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="255,255,255"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorPickerView"
+        android:drawableStart="@drawable/custom_rgb" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgbText">
+
+        <ImageButton
+            android:layout_margin="2dp"
+            android:id="@+id/modeButton"
+            android:layout_width="22dp"
+            android:layout_height="74dp"
+            android:layout_weight="2"
+            android:scaleType="centerCrop"
+            android:background="@drawable/custom_background"
+            app:srcCompat="@drawable/mode" />
+
+        <EditText
+            android:id="@+id/modeText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="8"
+            android:background="@drawable/custom_background"
+            android:gravity="center"
+            android:hint="Chọn hiệu ứng"
+            android:inputType="number"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <ImageButton
+            android:id="@+id/timeImage"
+            android:layout_width="22dp"
+            android:layout_height="74dp"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@drawable/custom_background"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/time" />
+
+        <EditText
+            android:id="@+id/timeText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="8"
+            android:hint="Chọn thời gian"
+            android:inputType="number"
+            android:background="@drawable/custom_background"
+            android:gravity="center"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/txText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="8"
+            android:background="@drawable/custom_background"
+            android:drawableStart="@drawable/mail"
+            android:drawableLeft="@drawable/mail"
+            android:gravity="center"
+            android:hint="Nội dung data gửi"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_margin="2dp"
+            android:id="@+id/txButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/custom_background"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/send" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
